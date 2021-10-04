@@ -18,7 +18,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["Bristol, City of", "Cotswold", "Kensington and Chelsea"]}
+          "oneOf": ["Kensington and Chelsea", "Bristol, City of", "Cotswold"]}
           }
   
   
@@ -50,7 +50,7 @@
         "field": "areaName",
         "type": "nominal",
         "scale": {"scheme": "set1"},
-        "title": "LEGEND TITLE",
+        "title": "Areas",
         "legend": {
           "orient": "top-left", 
           "fillColor": "#FcFdFd"}
