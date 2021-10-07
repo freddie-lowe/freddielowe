@@ -11,6 +11,36 @@ multi line comment */
 
 /* Format my paragraph */
 
+/* My name */
+
+h1 {
+	color: rgb(196, 95, 13);
+	font-size: 80px;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+/* First line */
+
+.title1 {
+	color: rgb(224, 178, 79);
+	font-size: 30px;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Separate week titles */
+
+.title2 {
+	color: rgb(224, 178, 79);
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: normal;
+
+}
+
 .chart {
 	border-style: solid;
 	border-width: 2px;
@@ -21,7 +51,23 @@ multi line comment */
 }
 
 body {
-	background-color: #043653;
+	background-color: #4b4b4b;
   }
 
+/* Button style */
 
+.button {
+	display: inline-block;
+	align-content: center;
+	border-radius: 4px;
+	background-color: #db7354;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 200px;
+	transition: all 1s;
+	cursor: pointer;
+	margin: 5px;
+  }
