@@ -15,10 +15,24 @@ multi line comment */
 
 h1 {
 	color: rgb(196, 95, 13);
-	font-size: 80px;
+	font-size: 130px;
 	margin-top: 10px;
 	text-align: center;
 	font-weight: bold;
+	text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+    1px 3px 2px rgba(16,16,16,0.4),
+    1px 6px 5px rgba(16,16,16,0.2),
+    1px 5px 5px rgba(16,16,16,0.2),
+    1px 5px 5px rgba(16,16,16,0.4);
 }
 /* First line */
 
@@ -55,9 +69,11 @@ body {
   }
 
 /* Button style */
+container {
+	align-content: center;
+}
 
 .button {
-	display: inline-block;
 	align-content: center;
 	border-radius: 4px;
 	background-color: #db7354;
@@ -70,4 +86,29 @@ body {
 	transition: all 1s;
 	cursor: pointer;
 	margin: 5px;
+  }
+
+  .button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+  }
+  
+  .button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+  }
+  
+  .button:hover span {
+	padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+	opacity: 1;
+	right: 0;
   }
