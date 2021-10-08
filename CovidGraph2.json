@@ -10,7 +10,7 @@
   },
   
    "data": {
-    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=newCasesByPublishDateRollingRate&format=csv",
+    "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/coviddata.csv",
     "format": {"type": "csv"}
   },
 
