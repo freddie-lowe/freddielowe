@@ -20,17 +20,17 @@ h1 {
 	text-align: center;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
     1px 3px 2px rgba(16,16,16,0.4),
-    1px 6px 5px rgba(16,16,16,0.2),
+    1px 10px 5px rgba(16,16,16,0.2),
     1px 5px 5px rgba(16,16,16,0.2),
     1px 5px 5px rgba(16,16,16,0.4);
 }
@@ -56,6 +56,7 @@ h1 {
 
 .navbuttons {
 	align-content: center;
+	justify-content: center;
 }
 
 .chart {
@@ -74,6 +75,7 @@ body {
 /* Button style */
 container {
 	align-content: center;
+	justify-content: center
 }
 
 .button {
@@ -86,7 +88,7 @@ container {
 	font-size: 28px;
 	padding: 20px;
 	width: 200px;
-	transition: all 1s;
+	transition: all 2s;
 	cursor: pointer;
 	margin: 5px;
   }
@@ -95,7 +97,7 @@ container {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
-	transition: 0.5s;
+	transition: 2s;
   }
   
   .button span:after {
@@ -104,7 +106,7 @@ container {
 	opacity: 0;
 	top: 0;
 	right: -20px;
-	transition: 0.5s;
+	transition: 2s;
   }
   
   .button:hover span {
