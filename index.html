@@ -43,11 +43,12 @@
 
 
   <div class="navbuttons">
-    <button class="button" onclick="location.href='index.html'">Portfolio</button>
-    <button class="button" onclick="location.href='project.html'">Project</button>
-    <button class="button" onclick="location.href='https://github.com/freddielowe1/freddielowe1.github.io'">Github</button>
-    <button class="button" onclick="location.href='https://rapidcharts.io/datascience'">Course Site</button>
- 
+    <button class="button" style="vertical-align:middle" onclick="location.href='index.html'"><span>Portfolio </span></button>
+    <button class="button" style="vertical-align:middle" onclick="location.href='project.html'"><span>Project </span></button>
+    <button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/freddielowe1/freddielowe1.github.io'"><span>Github </span></button>
+    <button class="button" style="vertical-align:middle" onclick="location.href='https://rapidcharts.io/datascience'"><span>Course Site </span></button>
+    
+
   </div>
 
   <p class=title1>Collection of charts made during the Data Science course</p>
@@ -56,12 +57,12 @@
   <p class=title2><span class="bold">Week 1 - Getting Started</span></p>
 
 
-
+<container class="week1">
     
 <!--Chart 1 -->
   <div class="chart" id="chart1">
       <script>
-        var myChart1 = "chart1_covidUKRegions.json";
+        var myChart1 = "charts/chart1_covidUKRegions.json";
         vegaEmbed('#chart1', myChart1);
       </script>
   </div>
@@ -69,7 +70,7 @@
 <!--Chart 2 -->
 <div class="chart" id="chart2">
     <script>
-      var myChart2 = "The_world's_disappearing_tropics.json";
+      var myChart2 = "charts/The_world's_disappearing_tropics.json";
       vegaEmbed('#chart2', myChart2);
     </script>
   </div>
@@ -77,19 +78,24 @@
 <!--Chart 3 -->
 <div class="chart" id="chart3">
     <script>
-      var myChart3 = "interactive_doubleSliderONS.json";
+      var myChart3 = "charts/interactive_doubleSliderONS.json";
       vegaEmbed('#chart3', myChart3);
     </script>
   </div>
   
+</container>
+
+
   <p class=title2><span class="bold">Week 2 - Charts generated using APIs</span></p>
   
-  <div class="container">
+
+
+<container class="week2">
 
 <!--Chart 4 -->
 <div class="chart" id="chart4">
   <script>
-    var myChart4 = "CovidGraph1.json";
+    var myChart4 = "charts/CovidGraph1.json";
     vegaEmbed('#chart4', myChart4);
   </script>
 </div>
@@ -97,10 +103,12 @@
   <!--Chart 5 -->
 <div class="chart" id="chart5">
   <script>
-    var myChart5 = "CovidGraph2.json";
+    var myChart5 = "charts/CovidGraph2.json";
     vegaEmbed('#chart5', myChart5);
   </script>
 </div>
+
+</container>
 
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
