@@ -10,7 +10,7 @@
   },
   
    "data": {
-    "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/coviddata.csv",
+    "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/coviddata.csv",
     "format": {"type": "csv"}
   },
 
