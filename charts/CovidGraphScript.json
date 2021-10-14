@@ -30,7 +30,7 @@
       "x": {
         "field": "a",
         "type": "temporal",
-        "title": "Cases in April/May 2020",
+        "title": "Cases in April-May 2020",
         "axis": {"grid": false}
       },
   
