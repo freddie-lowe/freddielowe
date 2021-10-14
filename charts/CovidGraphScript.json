@@ -30,7 +30,7 @@
       "x": {
         "field": "a",
         "type": "temporal",
-        "title": null,
+        "title": "Cases in April/May 2020",
         "axis": {"grid": false}
       },
   
@@ -42,14 +42,14 @@
       },
   
       "color": {
-        "field": "areaName",
+        "field": "",
         "type": "nominal",
         "scale": {"scheme": "set1"},
-        "title": "Areas",
+        "title": "Area",
         "legend": {
           "orient": "top-left", 
           "fillColor": "transparent"}
       }
 
   }
-  
+}

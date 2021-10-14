@@ -110,7 +110,7 @@ container {
 	right: 0;
   }
 
-  .week1, .week2 {
+  .week1, .week2, .week3 {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
