@@ -14,9 +14,10 @@ multi line comment */
 /* My name */
 
 h1 {
-	color: #ce80bd;
+	color: #ffffff;
 	font-size: 80px;
 	margin-top: 30px;
+	margin-bottom: 0px;	
 	text-align: center;
 	font-weight: bold;
 	font-family: 'Helvetica', Sans-serif;
@@ -26,7 +27,7 @@ h1 {
 .title1 {
 	color: #ffffff;
 	font-size: 30px;
-	margin-top: 10px;
+	margin-top: 15px;
 	text-align: center;
 	font-weight: bold;
 	font-family: 'Helvetica', Sans-serif;
@@ -56,41 +57,53 @@ h1 {
 	margin-left: 10px;
 	border-radius: 5px;
 	padding: 5px;
-	border-color: #d9a1eb;
+	border-color: #ffffff;
 	background-color: white;
 	
 }
 
 body {
-	background-color: #4f6c92;
+	background-color: #4f2e66;
+	width: 90%;
+	display: grid;
+	margin-left: 4.5%;
+	margin-right: 2.25%;
   }
 
 /* Button style */
 container {
 	align-content: center;
-	justify-content: center
+	justify-content: center;
+	flex-flow: row wrapq;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 3px;
+	border-color: #c0003a;
+	padding: 30px;
+
 }
 
 .button {
 	align-content: center;
 	border-radius: 4px;
-	background-color: #d9a1eb;
+	background-color: #c0003a;
 	border: none;
 	color: #ffffff;
 	text-align: center;
 	font-size: 28px;
 	padding: 20px;
 	width: 240px;
-	transition: all 2s;
 	cursor: pointer;
 	margin: 5px;
+	transition: color 1s;
   }
 
   .button span {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
-	transition: .5s;
+	transition: 0.5s;
+
   }
   
   .button span:after {
@@ -99,7 +112,8 @@ container {
 	opacity: 0;
 	top: 0;
 	right: -20px;
-	transition: .5s;
+	transition: 0.5s;
+
   }
   
   .button:hover span {
