@@ -14,54 +14,55 @@ multi line comment */
 /* My name */
 
 h1 {
-	color: #db7354;
+	color: #ce80bd;
 	font-size: 80px;
-	margin-top: 10px;
+	margin-top: 30px;
 	text-align: center;
 	font-weight: bold;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica', Sans-serif;
 }
 /* First line */
 
 .title1 {
-	color: rgb(224, 178, 79);
+	color: #ffffff;
 	font-size: 30px;
 	margin-top: 10px;
 	text-align: center;
 	font-weight: bold;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica', Sans-serif;
 }
 
 /* Separate week titles */
 
 .title2 {
-	color: rgb(224, 178, 79);
+	color: #ffffff;
 	font-size: 20px;
 	margin-top: 10px;
 	text-align: center;
 	font-weight: normal;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica', Sans-serif;
 }
 
 .navbuttons {
 	display:flex;
 	justify-content:center;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 .chart {
 	border-style: solid;
-	border-width: 2px;
+	border-width: 3px;
 	margin-left: 10px;
 	border-radius: 5px;
 	padding: 5px;
-	border-color: #000000;
+	border-color: #d9a1eb;
 	background-color: white;
 	
 }
 
 body {
-	background-color: #4b4b4b;
+	background-color: #4f6c92;
   }
 
 /* Button style */
@@ -73,9 +74,9 @@ container {
 .button {
 	align-content: center;
 	border-radius: 4px;
-	background-color: #db7354;
+	background-color: #d9a1eb;
 	border: none;
-	color: #FFFFFF;
+	color: #ffffff;
 	text-align: center;
 	font-size: 28px;
 	padding: 20px;
@@ -110,7 +111,7 @@ container {
 	right: 0;
   }
 
-  .week1, .week2, .week3 {
+  .week1, .week2, .week3, .week4, .week5 {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
