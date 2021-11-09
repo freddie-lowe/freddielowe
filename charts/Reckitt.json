@@ -10,8 +10,7 @@
     },
     
      "data": {
-      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/data_alphavantage-RKT.LON.json",
-      "format": {"type": "JSON"}
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/data_consumer-RBGLY.json"
     },
   
     
@@ -23,7 +22,7 @@
     "encoding": {
   
       "x": {
-        "field": "timestamp",
+        "field": "date",
         "type": "temporal",
         "title": null,
         "axis": {"grid": false}
