@@ -59,6 +59,7 @@ h1 {
 	padding: 5px;
 	border-color: #ffffff;
 	background-color: white;
+	flex-flow: row wrap;
 	
 }
 
