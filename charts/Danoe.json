@@ -1,7 +1,7 @@
 {
     
     "title": {
-      "text": "Reckitt Share Price Chart",
+      "text": "Danoe Share Price Chart",
       "subtitle":"Price at close, USD",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
@@ -10,7 +10,7 @@
     },
     
      "data": {
-      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/data_consumer-RBGLY.json",
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/data_consumer-DANOY.json",
       "format": {"type": "json"}
     },
   

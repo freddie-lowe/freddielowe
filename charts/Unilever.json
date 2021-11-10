@@ -1,7 +1,9 @@
 {
-    
+  
+  
+      
     "title": {
-      "text": "Reckitt Share Price Chart",
+      "text": "Unilever Share Price Chart",
       "subtitle":"Price at close, USD",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
@@ -10,7 +12,7 @@
     },
     
      "data": {
-      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/data_consumer-RBGLY.json",
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/data_consumer-UL.json",
       "format": {"type": "json"}
     },
   
@@ -18,7 +20,7 @@
     "height": 340,
     "width": 310,
      
-    "mark": {"type": "line", "point": false, "clip": "true", "color": "red"},
+    "mark": {"type": "line", "point": false, "color": "red"},
    
     "encoding": {
   
