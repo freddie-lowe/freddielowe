@@ -1,9 +1,9 @@
-  {"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+{"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   
   "description": "Coronavirus cases",
   
   "data": {
-    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=region&metric=newCasesByPublishDate&format=json",
+    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=region&metric=newCasesByPublishDateRollingSum&format=csv",
     "format": {"type": "csv"}
   },
 
@@ -62,7 +62,7 @@
   "encoding": {
     "x": {"field": "date", "type": "temporal", "title": null},
     "y": {
-      "field": "newCasesByPublishDate",
+      "field": "newCasesByPublishDateRollingSum",
       "type": "quantitative",
       "title": null
     },
