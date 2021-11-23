@@ -10,7 +10,7 @@
     },
     
      "data": {
-      "url": "https://api.tiingo.com/tiingo/fx/GBPUSD/prices?startDate=2016-06-30&resampleFreq=24hour&token=af48a7264c05d526d084461e7927e8913910add2&format=csv",
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/prices%20(6).csv",
       "format": {"type": "csv"}
     },
   

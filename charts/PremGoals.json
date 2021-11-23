@@ -1,0 +1,49 @@
+{
+    
+    "title": {
+      "text": "Top Premier League Goal Scorers in the 21/22 Season",
+      "subtitle":"Source: SportData API",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "https://app.sportdataapi.com/api/v1/soccer/topscorers?apikey=ee1552d0-4bc8-11ec-a1df-6bba2124c0b3&season_id=1980",
+      "format": {"type": "json",
+      "property": "data"}
+    },
+  
+    
+    "height": 340,
+    "width": 310,
+     
+     "transform": [
+       {"filter": {"field": "goals.overall", "gt": "3"}}
+     ],
+
+    "mark": {"type": "bar", "color": "red"},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "player.player_name",
+        "type": "nominal",
+        "title": null,
+        "axis": {"grid": false},
+        "sort": "-y"
+      },
+  
+      "y": {
+        "field": "goals.overall",
+        "type": "quantitative",
+        "title": null,
+        "scale": {"domain": [0,14]},
+        "axis": {"grid": false}
+      }
+  
+      
+  }
+  }
+  
