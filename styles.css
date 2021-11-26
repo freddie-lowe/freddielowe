@@ -131,4 +131,15 @@ container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+	margin-bottom: 10px;
+  }
+
+  .text-hw-8{
+  color: #ffffff;
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: normal;
+	font-family: 'Helvetica', Sans-serif;
+	margin-bottom: 10px;
   }
