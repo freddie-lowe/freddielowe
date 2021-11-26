@@ -127,7 +127,7 @@ container {
 	right: 0;
   }
 
-  .week1, .week2, .week3, .week4, .week5 {
+  .week1, .week2, .week3, .week4, .week5, .week7, .week8, .week9, .week10 {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
