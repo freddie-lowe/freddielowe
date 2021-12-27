@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<!-- Freddie Lowe, Data Science 2021 -->
+
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+<head>
+
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles.css">
+
+
+<!-- Title -->
+<h1>Data Science</h1>
+
+
+<!--Favicon-->
+<link rel="shortcut icon" href="favicon/favicon.ico">
+
+
+<head>
+
+  <!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+
+
+
+
+<!-- ///////////////////  START BODY //////////////////////////////////// -->
+
+<body>
+
+
+
+    <div class="navbuttons">
+        <button class="button" style="vertical-align:middle" onclick="location.href='portfolio.html'"><span>Portfolio </span></button>
+        <button class="button" style="vertical-align:middle" onclick="location.href='project.html'"><span>Project </span></button>
+        <button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/freddielowe1/freddielowe1.github.io'"><span>Github </span></button>
+        <button class="button" style="vertical-align:middle" onclick="location.href='https://rapidcharts.io/datascience'"><span>Course Site </span></button>
+    
+
+  </div>
+
+  <p class=title1 style="font-weight: 300;">Collection of charts made by Freddie Lowe during the Data Science course</p>
+  
+
+  <p class=title2><span style="font-weight: 700; color: #fff">Week 1</span> - Getting Started</p>
+
+
+<container class="week1">
+    
+<!--Chart 1 -->
+  <div class="chart" id="chart1">
+      <script>
+        var myChart1 = "charts/chart1_covidUKRegions.json";
+        vegaEmbed('#chart1', myChart1);
+      </script>
+  </div>
+
+<!--Chart 2 -->
+<div class="chart" id="chart2">
+    <script>
+      var myChart2 = "charts/The_world's_disappearing_tropics.json";
+      vegaEmbed('#chart2', myChart2);
+    </script>
+  </div>
+
+<!--Chart 3 -->
+<div class="chart" id="chart3">
+    <script>
+      var myChart3 = "charts/interactive_doubleSliderONS.json";
+      vegaEmbed('#chart3', myChart3);
+    </script>
+  </div>
+  
+</container>
+
+
+  <p class=title2><span style="font-weight: 700; color: #fff">Week 2 </span> - Charts generated using APIs and CSV files</p>
+  
+
+
+<container class="week2">
+
+<!--Chart 4 -->
+<div class="chart" id="chart4">
+  <script>
+    var myChart4 = "charts/CovidGraph1.json";
+    vegaEmbed('#chart4', myChart4);
+  </script>
+</div>
+  
+  <!--Chart 5 -->
+<div class="chart" id="chart5">
+  <script>
+    var myChart5 = "charts/CovidGraph2.json";
+    vegaEmbed('#chart5', myChart5);
+  </script>
+</div>
+
+</container>
+
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 3 </span>- Defining data with a manually inputted script and a graph with the variable GDP per capita added</p>
+
+<container class="week3">
+
+  <!--Chart 6 -->
+  <div class="chart" id="chart6">
+    <script>
+      var myChart6 = "charts/CovidGraphScript.json";
+      vegaEmbed('#chart6', myChart6);
+    </script>
+  </div>
+
+    <!--Chart 7 -->
+    <div class="chart" id="chart7">
+      <script>
+        var myChart7 = "charts/CovidGraphScript2.json";
+        vegaEmbed('#chart7', myChart7);
+      </script>
+    </div>
+
+</container>
+
+  <p class=title2><span style="font-weight: 700; color: #fff">Week 4 </span> - Finding and using new APIs</p>
+
+<container class="week4">
+
+  <!--Chart 8 -->
+  <div class="chart" id="chart8">
+    <script>
+      var myChart8 = "charts/Banks_Share_Price.json";
+      vegaEmbed('#chart8', myChart8);
+    </script>
+  </div>
+
+  <!--Chart 9 -->
+  <div class="chart" id="chart9">
+    <script>
+      var myChart9 = "charts/PremGoals.json";
+      vegaEmbed('#chart9', myChart9);
+    </script>
+  </div>
+
+</container>
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 5  </span>- API fetch from Python to compare share prices of global consumer and retail companies</p>
+
+<container class="week5">
+
+ 
+  <!--Chart 10 -->
+  <div class="chart" id="chart10">
+    <script>
+      var myChart10 = "charts/Reckitt.json";
+      vegaEmbed('#chart10', myChart10);
+    </script>
+  </div>
+
+   <!--Chart 11 -->
+   <div class="chart" id="chart11">
+    <script>
+      var myChart11 = "charts/Danoe.json";
+      vegaEmbed('#chart11', myChart11);
+    </script>
+  </div>
+
+<!--Chart 12 -->
+<div class="chart" id="chart12">
+  <script>
+    var myChart12 = "charts/Unilever.json";
+    vegaEmbed('#chart12', myChart12);
+  </script>
+</div>
+
+<!--Chart 13 -->
+<div class="chart" id="chart13">
+  <script>
+    var myChart13 = "charts/PandG.json";
+    vegaEmbed('#chart13', myChart13);
+  </script>
+</div>
+
+</container>
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 6 </span> - Reading week, no new charts</p>
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 7 </span> - Building my own web scraper</p>
+
+<container class="week7">
+
+  <!--Chart 14 -->
+<div class="chart" id="chart14">
+  <script>
+    var myChart14 = "charts/IBDTable.json";
+    vegaEmbed('#chart14', myChart14);
+  </script>
+</div>
+
+</container>
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 8 </span> - Festival of Economics</p>
+
+<container class="week8">
+
+<!--Chart 15 -->
+<div class="chart" id="chart15">
+  <script>
+    var myChart15 = "charts/UKSickness.json";
+    vegaEmbed('#chart15', myChart15);
+  </script>
+</div>
+
+<div class="text-hw-8">During the "Working from home or not working at all" panel, Philip Aldrick claimed that people took half as many sick days when WFH, in the context of the pandemic. 
+  The chart above shows that whilst the number of sick days has indeed fallen during 2020, the magnitude has not been as great as Philip suggets. The tooltip function can be used to show the precise details of the individual data points.
+  </div>
+
+
+</container>
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 9</span> - Advanced data analysis techniques</p>
+
+<container class="week9">
+
+<div class="pngchart">
+  <img src = "charts/JPM_GS.png" />
+</div>
+
+
+</container>
+
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 10 </span> - Adding two interactive charts </p>
+
+<container class="week10">
+
+
+</container>
+
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 11 </span> - No new content, revision week</p>
+
+
+
+<p class=title2><span style="font-weight: 700; color: #fff">Week 12 </span> - No classes, no new homeworks</p>
+
+</body>
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
+
+</html>
