@@ -42,7 +42,12 @@
         "type": "nominal",
         "scale": {"scheme": "set1"},
         "title": "Areas"
-      }
+      },
+      
+      "tooltip": [
+        {"field": "0", "type": "nominal", "title": "Bank"},
+        {"field": "1", "type": "quantitative", "title": "Gross annual fees from M&A"}
+      ]
   }
   }
   
