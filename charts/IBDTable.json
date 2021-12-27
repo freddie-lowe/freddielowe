@@ -28,7 +28,7 @@
         "type": "nominal",
         "title": null,
         "axis": {"grid": false},
-        "sort": "-y"
+        "sort": "^y"
       },
   
       "y": {
