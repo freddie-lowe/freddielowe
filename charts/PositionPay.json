@@ -1,0 +1,54 @@
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Bank Pay",
+  
+  "title": {
+      "text": "Bank Pay",
+      "subtitle":"Comparing how each position pays depending on the bank",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/pay2021_v3%20(1).csv",
+      "format": {"type": "csv"}
+    },
+  
+    "height": 130,
+    
+    "width": 120,
+    
+    "mark": {"type": "point", "color":"red"},
+    
+    
+    "encoding": {
+      
+      "x": {"field": "LEVEL", "type": "nominal", "title": null},
+      
+      "y": {
+        "field": "1",
+        "type": "quantitative",
+        "title": "Pay, £000s"
+      
+      },
+  
+      "facet": {
+        "field": "0",
+        "type": "nominal",
+        "columns": 3,
+        "title": null
+      },
+      "tooltip": [
+        {"field": "LEVEL", "type": "nominal", "title": "Bank"},
+        {"field": "1","type": "quantitative","title": "Pay, thousands of GBP","format": ",.0f"}
+      ]
+  
+      
+    },
+    "resolve": {"scale": {"y": "independent"}}
+  }
+  
