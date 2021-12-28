@@ -6,7 +6,7 @@
   
   "title": {
       "text": "Bank Pay",
-      "subtitle":"Comparing how each posotion pays given the bank",
+      "subtitle":"Comparing how each posotion pays given the bank in 2020/2021",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -14,7 +14,7 @@
     },
   
     "data": {
-      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/pay2021_v3%20(1).csv",
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/pay2021.csv",
       "format": {"type": "csv"}
     },
   
