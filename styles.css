@@ -167,6 +167,8 @@ container {
 	font-size: 20px;
 	margin-top: 10px;
 	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
 	font-weight: normal;
 	font-family: 'Open Sans Condensed', sans-serif;
 	margin-bottom: 10px;

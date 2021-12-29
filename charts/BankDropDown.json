@@ -19,13 +19,13 @@
       "format": {"type": "csv"}
     },
   
-    "height": 130,
+    "height": 340,
     
-    "width": 120,
+    "width": 310,
     
-    "mark": {"type": "bar", "color":"red"},
+    "mark": {"type": "point", "color":"red"},
     
- "selection": {
+  "selection": {
     "LEVEL": {
       "type": "single",
       "fields": ["LEVEL"],
@@ -35,9 +35,15 @@
           null,
           "JPMorgan",
           "GoldmanSachs",
-          "CITI"
+          "MorganStanley",
+          "BAML",
+          "CITI",
+          "DeutscheBan",
+          "Barclays",
+          "CreditSuisse",
+          "UBS"
         ],
-        "name": "Pick a region: "
+        "name": "Pick a bank: "
       }
     }
   },
@@ -63,7 +69,7 @@
   
     
       "tooltip": [
-        {"field": "0", "type": "nominal", "title": "Position"},
+        {"field": "LEVEL", "type": "nominal", "title": "Bank"},
         {"field": "1","type": "quantitative","title": "Pay, thousands of GBP","format": ",.0f"}
       ]
   
