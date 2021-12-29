@@ -99,7 +99,7 @@ container {
 	border-width: 2px;
 	border-radius: 3px;
 	border-color: #ffffff;
-	padding: 30px;
+	padding: 60px;
 
 }
 
@@ -159,7 +159,7 @@ container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
   }
 
 
