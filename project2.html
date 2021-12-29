@@ -18,7 +18,7 @@
 
 
 <!-- Title -->
-<h1>Data Science</h1>
+<h1>Data Science Project</h1>
 
 
 <head>
@@ -44,6 +44,13 @@
 <p class=title1>A project exploring the effect on pay on investment banks' performance</p>
 
 <container class="sectionA">
+
+  <div class="text-level-A"> This section outlines the best-performing global investment banks </div>
+
+  <div class="text-level-B">This first chart shows the performance of the top 10 investment banks globally, based on total fee value for M&A alone. This provides a snapshot of the major players
+    in the sector - it is these banks whose pay will be compared to their performance. The chart can be recreated <a href="https://colab.research.google.com/drive/1Dj3RkMDs8wl5iAcQP9PeOScIGM61p5K_?usp=sharing target="_blank" style="color:white">here.</a> 
+  </div>
+
 <!--Chart 14 -->
 <div class="chart" id="chart14">
     <script>
@@ -52,16 +59,16 @@
     </script>
   </div>
 
-  <div class="text-section-A">This first chart shows the performance of the top 10 investment banks globally, based on total fee value for M&A alone. This provides a snapshot of the major players
-      in the sector - it is these banks whose pay will be compared to their performance. The chart can be recreated <a href="https://colab.research.google.com/drive/1Dj3RkMDs8wl5iAcQP9PeOScIGM61p5K_?usp=sharing target="_blank" style="color:white">here.</a> 
-    </div>
+
 
 </container>
 
 
 <container class="sectionB">
 
-  <div class="text-section-A">Arkesden is a head hunter, based in London, which recruits for Private Equity, Real Estate, Alternatives, Energy and (crucially), Investment Banking. 
+<div class="text-level-A"> This section outlines the pay landscape for Investment Bankers in London </div>
+
+  <div class="text-level-B">Arkesden is a head hunter, based in London, which recruits for Private Equity, Real Estate, Alternatives, Energy and (crucially), Investment Banking. 
     Each year they produce a report which summaries the pay in each sector, which is a free-to-download PDF which summarises the pay in each sector for each bank. A PDF scraper has 
     been built to scrape this PDF, meaning that each year when the report is published, this website can easily be scraped. The link for the scraper is <a href="https://colab.research.google.com/drive/1gvyMhGYsEuG0Nz7rn6sJQ6BvTqt8IK_q?usp=sharing target="_blank" style="color:white">here.</a> 
   </div>
@@ -82,20 +89,23 @@
   </script>
 </div>
 
-<div class="text-section-A"> The above charts summarise the landscape, and compare how banks have paid in 2020/2021 depending on the position. From immediate inspection, it is clear
+<div class="text-level-B"> The above charts summarise the landscape, and compare how banks have paid in 2020/2021 depending on the position. From immediate inspection, it is clear
   that Bank of Merrill Lynch (BAML) pays more than other banks, especially at the Analyst rank (the lowest level). This project will then look and see if this translates to greater 
   performance overall.</div>
 
 <!--Chart 17 -->
 <div class="chart" id="chart17">
   <script>
-    var myChart17 = "charts/BankDropDown.json";
+    var myChart17 = "charts/BankTotalComp.json";
     vegaEmbed('#chart17', myChart17);
   </script>
 </div>
 
 
-<div class="text-section-A"> The above chart shows the same data, presented in a different way which might be easier to follow as the reader (to be reworded).
+<div class="text-level-B"> The above chart shows the total compensation, including both base pay and bonus pay, the latter often being larger than the former. Bonus is
+  a function of the performance of the individual and so using this data will also allow us to analyse whether performance related pay (PRP), on a bank level, also affects 
+  performance. The data from the chart was again scraped from Arkesden and can be 
+  replicated <a href="https://colab.research.google.com/drive/1xYs3wGOMoyUAM0xy5N4-e0zn0kVu_6gC?usp=sharing target="_blank" style="color:white">here.</a>
 
 </div>
 
