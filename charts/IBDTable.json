@@ -11,7 +11,7 @@
     },
     
      "data": {
-      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/IBDLeague.csv",
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/IBDLeagueTotal.csv",
       "format": {"type": "csv"}
     },
   
