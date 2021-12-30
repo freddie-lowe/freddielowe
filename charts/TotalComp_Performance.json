@@ -1,0 +1,83 @@
+
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Total Compensation",
+  
+  "title": {
+      "text": "Total Compensation, Base and Bonus",
+      "subtitle":"Comparing the total compensation for each position in 2020/2021, Arkesden",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "data": {
+      "name":"myData",
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/combined_pay_rank.csv",
+      "format": {"type": "csv"}
+    },
+  
+    "height": 340,
+    
+    "width": 310,
+    
+    "mark": {"type": "point", "color":"red"},
+    
+    "transform":[
+      
+      {"filter": {"selection": "Rank"}}
+
+
+    ],
+
+  "selection": {
+    "Rank": {
+      "type": "single",
+      "fields": ["Rank"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Associate 1",
+          "Associate 2",
+          "Associate 3",
+          "VP 1",
+          "VP 2",
+          "VP 3"
+        ],
+        "name": "Pick a position: "
+      }
+    }
+  },
+
+
+
+    
+    "encoding": {
+      
+      "x": {"field": "2020-21 Pay", "type": "nominal", "title": null,
+      "axis": {"tickCount": 5}
+      },
+      
+      "y": {
+        "field": "2021 Fees",
+        "type": "quantitative",
+        "title": null
+      
+      },
+  
+    
+      "tooltip": [
+        {"field": "Bank", "type": "nominal", "title": "Position"},
+        {"field": "2020-21 Pay","type": "quantitative","title": "Pay, thousands of GBP","format": ",.0f"},
+        {"field": "2021 Fees", "type": "quantitative", "title": "Bank Fees"}
+      ]
+  
+      
+    },
+    "resolve": {"scale": {"y": "independent"}}
+  }
+  
