@@ -58,8 +58,8 @@
     
     "encoding": {
       
-      "x": {"field": "2020-21 Pay", "type": "nominal", "title": null,
-      "axis": {"labelAlign": "right", "tickCount": 20, "title": "Total Compensation, GBP"}
+      "x": {"field": "2020-21 Pay", "type": "nominal", "title": "Total Compensation, GBP",
+      "axis": {"labels": true, "ticks": true, "tickCount": 10, "labelOverlap": "parity"}
       },
       
       "y": {
@@ -74,7 +74,7 @@
       "tooltip": [
         {"field": "Bank", "type": "nominal", "title": "Position"},
         {"field": "2020-21 Pay","type": "quantitative","title": "Pay, GBP","format": ",.0f"},
-        {"field": "2021 Fees", "type": "quantitative", "title": "Bank Fees, millions of USD"}
+        {"field": "2021 Fees", "type": "quantitative", "title": "Bank Fees, millions of USD","format": ",.0f"}
       ]
   
       
