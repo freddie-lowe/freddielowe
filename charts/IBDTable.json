@@ -1,53 +1,52 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
 
-    "title": {
-      "text": "2021 Investment Banking League Tables",
-      "subtitle":"Source: FT Rankings, using a web scraper",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-    },
-    
-     "data": {
-      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/IBDLeagueTotal.csv",
-      "format": {"type": "csv"}
-    },
+  "title": {
+    "text": "2021 Investment Banking League Tables",
+    "subtitle":"Source: FT Rankings, using a web scraper",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
   
-    
-    "height": 340,
-    "width": 310,
-     
-    "mark": {"type": "bar", "point": false, "color": "red"},
+   "data": {
+    "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/IBDLeagueTotal.csv",
+    "format": {"type": "csv"}
+  },
+
+  
+  "height": 340,
+  "width": 310,
    
-    "encoding": {
-  
-      "x": {
-        "field": "0",
-        "type": "nominal",
-        "title": null,
-        "axis": {"grid": false},
-        "sort": "^y"
-      },
-  
-      "y": {
-        "field": "1",
-        "type": "quantitative",
-        "title": null,
-        "axis": {"grid": false}
-      },
-  
-      "color": {
-        "type": "nominal",
-        "scale": {"scheme": "set1"},
-        "title": "Areas"
-      },
-      
-      "tooltip": [
-        {"field": "0", "type": "nominal", "title": "Bank"},
-        {"field": "1", "type": "quantitative", "title": "Gross annual fees from M&A"}
-      ]
-  }
-  }
-  
+  "mark": {"type": "bar", "point": false, "color": "red"},
+ 
+  "encoding": {
+
+    "x": {
+      "field": "0",
+      "type": "nominal",
+      "title": null,
+      "axis": {"grid": false},
+      "sort": "^y"
+    },
+
+    "y": {
+      "field": "1",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false}
+    },
+
+    "color": {
+      "type": "nominal",
+      "scale": {"scheme": "set1"},
+      "title": "Areas"
+    },
+    
+    "tooltip": [
+      {"field": "0", "type": "nominal", "title": "Bank"},
+      {"field": "1", "type": "quantitative", "title": "Gross annual fees from M&A"}
+    ]
+}
+}

@@ -117,7 +117,7 @@ container {
 	cursor: pointer;
 	margin: 5px;
 	transition: color 1s;
-	font-family: 'Open Sans Condensed', sans-serif;;
+	font-family: 'Open Sans Condensed', sans-serif;
   }
 
   .button span {
@@ -153,6 +153,8 @@ container {
 	flex-flow: row wrap;
 	justify-content: center;
 	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 40px;
   }
 
 .sectionA, .sectionB, .sectionC {
