@@ -26,7 +26,8 @@
           "x": {
             "field": "2021 VP 2 Total Comp",
             "type": "quantitative",
-            "scale": {"domain": [265000, 320000]}
+            "scale": {"domain": [265000, 320000]},
+            "axis": {"grid": false}
           },
           "y": {
             "field": "YTD Fees",

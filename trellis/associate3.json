@@ -26,7 +26,8 @@
           "x": {
             "field": "2021 Associate 3 Total Comp",
             "type": "quantitative",
-            "scale": {"domain": [200000, 240000]}
+            "scale": {"domain": [200000, 240000]},
+            "axis": {"grid": false}
           },
           "y": {
             "field": "YTD Fees",
