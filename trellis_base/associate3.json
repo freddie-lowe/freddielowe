@@ -1,0 +1,88 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+   
+    "title": {
+        "text": "",
+        "subtitle":"Comparing how each posotion pays given the bank in 2020/2021. Source: Arkesden",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"
+      },
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/basepay_rank_column.csv"
+    },
+    "height": 140,
+    "width": 160,
+    "layer": [
+      {
+        "mark": {
+          "type": "point",
+          "filled": false
+        },
+        "encoding": {
+          "x": {
+            "field": "2021 Associate 3 base",
+            "type": "quantitative",
+            "scale": {"domain": [120, 135]},
+            "axis": {"grid": false}
+          },
+          "y": {
+            "field": "YTD Fees",
+            "type": "quantitative"
+          },
+           "tooltip": [
+          {"field": "Bank", "type": "nominal", "title": "Bank"},
+          {"field": "2021 Associate 3 base","type": "quantitative","title": "Pay, thousands of GBP","format": ",.0f"},
+          {"field": "YTD Fees","type": "quantitative","title": "Bank YTD Fees, $mn","format": ",.0f"}
+        ]  
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "firebrick"
+        },
+        "transform": [
+          {
+            "regression": "YTD Fees",
+            "on": "2021 Associate 3 base"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "2021 Associate 3 base",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "YTD Fees",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "regression": "YTD Fees",
+            "on": "2021 Associate 3 base",
+            "params": true
+          },
+          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+        ],
+        "mark": {
+          "type": "text",
+          "color": "firebrick",
+          "x": "width",
+          "align": "right",
+          "y": -5
+        },
+        "encoding": {
+          "text": {"type": "nominal", "field": "R2"}
+          
+        }
+      }
+    ]
+  }
+  
