@@ -85,9 +85,9 @@ h1 {
 body {
 	background-color: #FF6766;
 	width: 90%;
-	display: grid;
+	display:inline-block;
 	margin-left: 4.5%;
-	margin-right: 2.25%;
+	margin-right: 0%;
   }
 
 /* Button style */
@@ -192,7 +192,7 @@ container {
 
   .text-level-A{
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 25px;
 	margin-top: 10px;
 	text-align: center;
 	font-weight: normal;
