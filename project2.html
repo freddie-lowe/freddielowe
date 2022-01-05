@@ -47,20 +47,17 @@
 
  <div class="text-level-A"> Introduction </div>
 
- <div class="text-level-B"> <p>One of the most fundemental questions any employer must ask is how much to pay an employee. 
-   Microeconomic theory would suggest that employees must be paid just above their no-shirking level: the point where the wage 
-   is high enough that losing one's job would be more costly than exerting effort. In practice, this is an impossible number to 
-   reach, and in any case the model is too simplistic. </p>
-
-   <p>Careers in the City are no exception to this, and have long been renowned for paying large amounts. With the on-going war on talent,
-   as well as burnout during the panemic, banks have further raised their salaries (in the region of 30%) this year for all their junior roles. But does this 
-   provide value for money? This project aims to establish a link between the pay for junior roles in investment banks with their performance,
+ <div class="text-level-B"> <p>One of the most fundamental questions any employer must ask is how much to pay an employee. 
+   Careers in the City are no exception to this, and have long been renowned for paying large amounts. With the on-going war on talent,
+   as well as burnout during the pandemic, banks have further raised their salaries (in the region of 30%) for all junior roles this year. 
+   But does this provide value for money? 
+   This project aims to establish a link between pay for bankers and their performance,
    measured by the fees the bank brings in each year. </p>
 
   
-   <p>Unfortunately, banks do not actively publish their annual fees and how much they pay their employees. Furthermore, data providors, such as Refinitiv,
-  which publish APIs containing this information, charge thousands each yaer for access. This project therefore scrapes free resources
-  avalaible to anyone in the public to try establish a link. Please note: this project does not aim to establish causality - 
+   <p>Unfortunately, banks do not actively publish their annual fees and employee salaries. Furthermore, data providers, such as Refinitiv,
+  which publish APIs containing this information, charge thousands each year for access. This project's primary aim is to use free 
+  resources to provide this data, and perform some basic analysis of it. Please note: this project does not aim to establish causality - 
   the performance of banks is such a complicated field - but merely tries to establish a link. </p>
  </a> 
 </div>
@@ -71,10 +68,10 @@
 
   <div class="text-level-A"> Section 1: What are the major global investment banks </div>
 
-  <div class="text-level-B">This first chart shows the performance of the top 10 investment banks globally, based on total fee value. 
-    This graph outlines the major players in the space - it is these banks whose pay will be compared to their performance. 
-    The data is from the FT, scraped from their website. Sadly the FT only publishes the top 10 banks, 
-    but it is a free resource which can be updated very quickly. The scraper can be found <a href="https://colab.research.google.com/drive/1Dj3RkMDs8wl5iAcQP9PeOScIGM61p5K_?usp=sharing target="_blank" style="color:white">here.</a> 
+  <div class="text-level-B">This first chart outlines the major players in the space.
+    The data is from the FT, scraped from their website. Sadly the FT only publishes the top 10 banks (not the top 30), 
+    but it is a free resource which can be updated very quickly. Whilst they also produce last year's tables, these are 
+    nested in a dynamic table which cannot easily be scraped. The table can be replicated <a href="https://colab.research.google.com/drive/1Dj3RkMDs8wl5iAcQP9PeOScIGM61p5K_?usp=sharing target="_blank" style="color:white">here.</a> 
   </div>
 
 <!--Chart 14 -->
@@ -95,11 +92,15 @@
 
 <div class="text-level-A"> Section 2: Pay landscape for Investment Bankers in London </div>
 
-  <div class="text-level-B">Arkesden is a head hunter, based in London, which recruits for Private Equity, Real Estate, Alternatives, Energy and (crucially), Investment Banking. 
-    Each year they produce a free-to-download PDF report summarising pay in each sector. 
-    A scraper has been built to scrape this PDF, meaning that each year when the report is published, the charts can be updated. 
-    <p>The latest PDF (2020-2021) does not reflect the recent increase in base salary, but the scraper has been designed to 
-    be fully automated, meaning when the latest report comes out updating the data will be a quick process. The link for the scraper is <a href="https://colab.research.google.com/drive/1gvyMhGYsEuG0Nz7rn6sJQ6BvTqt8IK_q?usp=sharing target="_blank" style="color:white">here.</a> 
+  <div class="text-level-B">Arkesden is a head hunter, based in London, which produces an annual, free-to-download PDF report 
+    summarising investment banking pay. Press
+    <a href="https://www.arkesden.com/asset/8424/download?1619082748 target="_blank" style="color:white">here</a> 
+    for the latest report.
+    A scraper has been built, meaning that each year when the report is published, the charts can easily be refreshed. 
+    Camelot (the PDF reader in Python) needed significant adjustments for edge and row tolerance, but the final product should 
+    collect all data in any new report.
+    <p>The latest PDF (2020-2021) does not reflect the recent increase in base salary. 
+      The link for the scraper is <a href="https://colab.research.google.com/drive/1gvyMhGYsEuG0Nz7rn6sJQ6BvTqt8IK_q?usp=sharing target="_blank" style="color:white">here.</a> 
   </p>
   </div>
 
@@ -120,8 +121,7 @@
 </div>
 
 <div class="text-level-B"> The two charts above summarise base pay (excluding bonuses, which often make up a sizable proportion
-  of a bankers' salary). From immediate inspection, it is clear
-  that Bank of Merrill Lynch (BAML) pays more than other banks, especially at the Analyst rank (the lowest level), and 
+  of a bankers' salary). From immediate inspection, Bank of Merrill Lynch (BAML) pays more than other banks, especially at the Analyst rank (the lowest level), and 
   we will test if this translates to greater performance.</div>
 
 <!--Chart 17 -->
@@ -135,8 +135,8 @@
 
 <div class="text-level-B"> The chart above shows the total compensation, including both base pay and bonus pay. Bonus is
   a function of the performance of the individual (what we are testing) and performance of the bank, an example of reverse causality,
-  hence why this project is not aiming to infer causality. The data from the chart was again scraped from Arkesden and can be 
-  replicated <a href="https://colab.research.google.com/drive/1xYs3wGOMoyUAM0xy5N4-e0zn0kVu_6gC?usp=sharing target="_blank" style="color:white">here.</a>
+  hence why this project is not aiming to infer causality. The data from the chart was again scraped from Arkesden and can be replicated
+  <a href="https://colab.research.google.com/drive/1xYs3wGOMoyUAM0xy5N4-e0zn0kVu_6gC?usp=sharing target="_blank" style="color:white">here.</a>
 
 </div>
 
@@ -150,13 +150,13 @@
 <div class="text-level-A"> Section 3: Comparing compensation to bank performance </div>
 
 <div class="text-level-B"> This section combines the previous two, and places pay against performance in a scatter plot. 
-  <p>There were quite a few challenges to overcome in making these charts, such as two of the top 10 banks not having 
-    pay data, and one bank with pay data not being in the FT scraper. Furthermore, the FT names the banks differently
+  <p>There were quite a few challenges to overcome in making these charts, such as some of the 10 banks not having 
+    pay data, and vice versa. Furthermore, the FT names the banks differently
     to Arkesden meaning all banks had to be renamed.</p>
     In future, one will have to manually check all banks 
     with pay data are listed in the FT table, and vice versa for when the two datasets are merged. However, the rest of the 
     python file is automated and should be easily updatable each time a new report is published. The data in the charts can be 
-  replicated UPDATE LINK <a href="https://colab.research.google.com/drive/1xYs3wGOMoyUAM0xy5N4-e0zn0kVu_6gC?usp=sharing target="_blank" style="color:white">here.</a>
+  replicated <a href="https://colab.research.google.com/drive/1Si9vNRv9sr6IWod5x9Dwcj5z3uFfSGBY?usp=sharing target="_blank" style="color:white">here.</a>
 </div>
 
 <!--Chart 18 -->
@@ -182,14 +182,12 @@
   <div class="text-level-A"> Section 4: Regressing bank performance on compensation </div>
 
   <div class="text-level-B"><p> This section regresses the charts in section 3. We cannot regress all ranks together, 
-    because comparing Analyst 1 pay from one bank cannot be compared to VP (Vice President) 3 pay in another bank. 
-    Sadly, past FT league tables are not avalaible which would add more datapoints, but the python code saves this data 
-    as a new file with today's date each time it is run, meaning that should this code be run each year, it will continue to save 
-    historical data. 
+    because one cannot compare Analyst 1 pay to VP (Vice President) 3 pay in the same regression. 
+    With the scraper auto-saving backups, each year we would get more datapoints improving the reliability of our regression. 
   </p>
-      Ideally, this chart would be made using a Vega trelllis, but I could not get the trellis to run all the 
+      Ideally, this chart would be made using a Vega trellis, but I could not get the trellis to run all the 
       regressions individually, so this section is made of smaller charts combined in a div. The data in the charts can be 
-    replicated UPDATE LINK <a href="https://colab.research.google.com/drive/1xYs3wGOMoyUAM0xy5N4-e0zn0kVu_6gC?usp=sharing target="_blank" style="color:white">here.</a>
+    replicated <a href="https://colab.research.google.com/drive/1qitCIEij52xhSsECo90t2-tCZIBg591f?usp=sharing target="_blank" style="color:white">here.</a>
 
   </div>
 
@@ -301,7 +299,7 @@
 <!--Chart 24 -->
 <div class="chartt" id="chart24">
   <script>
-    var myChart24 = "trellis/vp1.json";
+    var myChart24 = "trellis/vp2.json";
     vegaEmbed('#chart24', myChart24);
   </script>
 </div>
@@ -309,14 +307,21 @@
 <!--Chart 25 -->
 <div class="chartt" id="chart25">
   <script>
-    var myChart25 = "trellis/vp1.json";
+    var myChart25 = "trellis/vp3.json";
     vegaEmbed('#chart25', myChart25);
   </script>
 </div>
 
 </div>
 
-<div class="text-level-B"><p> ADD ANALYSIS 
+<div class="text-level-B"><p> As expected, in the second trellis, there is a strong correlation between the total compensation
+  of individuals and the performance of the bank. This is because bank bonuses tend to be a function of the performance of the bank. 
+  However, the relationship is striking, with an R2>0.4 in all but two regressions. </p>
+  <p>Unsurprisingly, the R2 is much lower when considering just base pay. However, there is still an upward trend in all graphs, 
+    suggesting that there is still some correlation between base pay and performance. My initial expectation was the 
+    exact opposite: I expected the lower-performing banks to need to pay a higher salary to attract talent, and the better performing 
+    banks leveraging their prestige. Clearly this is not the case: 
+    banks which pay more have, on average, better performance.
 </p>
 </div>
   </container>
@@ -325,7 +330,14 @@
 
     <div class="text-level-A"> Conclusion </div>
 
-    <div class="text-level-B"><p> CONCLUDE </p></div>
+    <div class="text-level-B"><p> Overall, many of the project's aims have been met. Data (in a space which is highly 
+      protected by paywalls) has been uncovered, collection automated, and used in analysis. 
+      The greatest weakness of the project is that there are simply
+    not enough datapoints for more robust regressions. 
+    However, the main aim of this project has been in Python making sure the scrapers are 
+    fully automated, allowing data to be refreshed each year, a goal which has been met. More robust regressions
+    could follow.
+   </p></div>
 
   </container>
 
