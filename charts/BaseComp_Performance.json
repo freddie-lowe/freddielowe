@@ -79,7 +79,7 @@
     
       "tooltip": [
         {"field": "Bank", "type": "nominal", "title": "Bank"},
-        {"field": "2020-21 Pay","type": "quantitative","title": "Pay, GBP","format": ",.0f"},
+        {"field": "2020-21 Pay","type": "quantitative","title": "Pay, thousands of GBP","format": ",.0f"},
         {"field": "2021 Fees", "type": "quantitative", "title": "Bank Fees, millions of USD","format": ",.0f"}
       ]
   

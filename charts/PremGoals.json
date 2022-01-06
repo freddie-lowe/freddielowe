@@ -19,7 +19,7 @@
       "width": 310,
        
        "transform": [
-         {"filter": {"field": "goals.overall", "gt": "3"}}
+         {"filter": {"field": "goals.overall", "gt": "4"}}
        ],
   
       "mark": {"type": "bar", "color": "red", "width": "4"},

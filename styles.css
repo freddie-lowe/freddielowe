@@ -201,7 +201,7 @@ container {
 	font-weight: bold;
   }
 
-  .text-level-B{
+  .text-level-B, .text{
 	color: #ffffff;
 	font-size: 20px;
 	margin-top: 10px;
