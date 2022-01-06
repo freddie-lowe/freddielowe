@@ -35,7 +35,7 @@
           },
           "tooltip": [
          {"field": "Bank", "type": "nominal", "title": "Bank"},
-         {"field": "2021 VP 1 Total Comp","type": "quantitative","title": "Pay, thousands of GBP","format": ",.0f"},
+         {"field": "2021 VP 1 Total Comp","type": "quantitative","title": "Pay, GBP","format": ",.0f"},
          {"field": "YTD Fees","type": "quantitative","title": "Bank YTD Fees, $mn","format": ",.0f"}
        ]    
         }
