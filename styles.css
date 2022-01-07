@@ -26,6 +26,17 @@ h1 {
 }
 /* First line */
 
+
+h2 {
+	color: #ffffff;
+	font-size: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
 .title1 {
 	color: #ffffff;
 	font-size: 30px;
