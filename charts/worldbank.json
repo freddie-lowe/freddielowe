@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "EU GDP per Capita",
+      "subtitle":"Source: World Bank API",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+      "data": {
+      "url": "https://api.factmaven.com/xml-to-json/?xml=https://api.worldbank.org/v2/country/EU/indicator/NY.GDP.MKTP.CD?format=XML",
+      "format": {"property": "data.data"}
+    },
+    
+    "height": 340,
+    "width": 310,
+      
+    "mark": {"type": "line", "point": false, "color": "red"},
+  
+    "transform": [
+      {"filter": "datum.value > 0"},
+      {"calculate":"datum.value/1000000000", "as": "value"}
+    ],
+    
+    "encoding": {
+  
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "GDP, USD tn",
+        "axis": {
+          "grid": false
+          }
+      }
+    }
+  }

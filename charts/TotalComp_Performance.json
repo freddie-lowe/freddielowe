@@ -1,83 +1,82 @@
 
 
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
-    "description": "Total Compensation on Bank Performance",
-  
-  "title": {
-      "text": "Total Compensation and Bank Performance",
-      "subtitle":"Banker pay and bank performance for each level of seniority",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-    },
-  
-    "data": {
-      "name":"myData",
-      "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/combined_pay_rank.csv",
-      "format": {"type": "csv"}
-    },
-  
-    "height": 340,
-    
-    "width": 310,
-    
-    "mark": {"type": "point", "color":"red"},
-    
-    "transform":[
-      
-      {"filter": {"selection": "Rank"}}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
+  "description": "Total Compensation on Bank Performance",
 
-    ],
-
-  "selection": {
-    "Rank": {
-      "type": "single",
-      "fields": ["Rank"],
-      "bind": {
-        "input": "select",
-        "options": [
-          null,
-          "Associate 1",
-          "Associate 2",
-          "Associate 3",
-          "VP 1",
-          "VP 2",
-          "VP 3"
-        ],
-        "name": "Pick a position: "
-      }
-    }
+"title": {
+    "text": "Total Compensation and Bank Performance",
+    "subtitle":"Banker pay and bank performance for each level of seniority",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
   },
 
+  "data": {
+    "name":"myData",
+    "url": "https://raw.githubusercontent.com/freddielowe1/freddielowe1.github.io/main/data/combined_pay_rank.csv",
+    "format": {"type": "csv"}
+  },
+
+  "height": 340,
+  
+  "width": 310,
+  
+  "mark": {"type": "point", "color":"red"},
+  
+  "transform":[
+    
+    {"filter": {"selection": "Rank"}}
 
 
-    
-    "encoding": {
-      
-      "x": {"field": "2020-21 Pay", "type": "nominal", "title": "Total Compensation, GBP",
-      "axis": {"labels": true, "ticks": true, "tickCount": 10, "labelOverlap": "parity"}
-      },
-      
-      "y": {
-        "field": "2021 Fees",
-        "type": "quantitative",
-        "title": "Gross Bank Fees, million USD",
-        "axis": {"tickCount": 6}
-      
-      },
-  
-    
-      "tooltip": [
-        {"field": "Bank", "type": "nominal", "title": "Bank"},
-        {"field": "2020-21 Pay","type": "quantitative","title": "Pay, GBP","format": ",.0f"},
-        {"field": "2021 Fees", "type": "quantitative", "title": "Bank Fees, millions of USD","format": ",.0f"}
-      ]
-  
-      
+  ],
+
+"selection": {
+  "Rank": {
+    "type": "single",
+    "fields": ["Rank"],
+    "bind": {
+      "input": "select",
+      "options": [
+        null,
+        "Associate 1",
+        "Associate 2",
+        "Associate 3",
+        "VP 1",
+        "VP 2",
+        "VP 3"
+      ],
+      "name": "Pick a position: "
     }
   }
+},
+
+
+
   
+  "encoding": {
+    
+    "x": {"field": "2020-21 Pay", "type": "nominal", "title": "Total Compensation, GBP",
+    "axis": {"labels": true, "ticks": true, "tickCount": 5, "labelOverlap": true, "labelAngle": 0}
+    },
+    
+    "y": {
+      "field": "2021 Fees",
+      "type": "quantitative",
+      "title": "Gross Bank Fees, million USD",
+      "axis": {"tickCount": 6}
+    
+    },
+
+  
+    "tooltip": [
+      {"field": "Bank", "type": "nominal", "title": "Bank"},
+      {"field": "2020-21 Pay","type": "quantitative","title": "Pay, GBP","format": ",.0f"},
+      {"field": "2021 Fees", "type": "quantitative", "title": "Bank Fees, millions of USD","format": ",.0f"}
+    ]
+
+    
+  }
+}
