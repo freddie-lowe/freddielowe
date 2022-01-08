@@ -34,7 +34,7 @@
     "y": {
       "field": "1",
       "type": "quantitative",
-      "title": null,
+      "title": "Gross annual fees 2021, mm USD",
       "axis": {"grid": false}
     },
 
@@ -46,7 +46,7 @@
     
     "tooltip": [
       {"field": "0", "type": "nominal", "title": "Bank"},
-      {"field": "1", "type": "quantitative", "title": "Gross annual fees from M&A"}
+      {"field": "1", "type": "quantitative", "title": "Gross annual fees, mm USD"}
     ]
 }
 }

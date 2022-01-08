@@ -5,7 +5,7 @@
     "description": "Bank Pay",
   
   "title": {
-      "text": "Bank Pay",
+      "text": "Position Pay",
       "subtitle":"Comparing how each position pays depending on the bank in 2020/2021. Source: Arkesden",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
@@ -22,7 +22,7 @@
     
     "width": 120,
     
-    "mark": {"type": "point", "color":"red"},
+    "mark": {"type": "bar", "color":"red"},
     
     
     "encoding": {
