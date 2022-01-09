@@ -74,6 +74,7 @@ h2 {
 	border: red solid 2px;
 	background-color: white;
 	flex-flow: row wrap;
+	clear:left;
 	
 }
 
@@ -111,6 +112,7 @@ container {
 	border-radius: 3px;
 	border-color: #ffffff;
 	padding: 60px;
+	clear:both;
 
 }
 
@@ -210,6 +212,7 @@ container {
 	font-family: 'Open Sans Condensed', sans-serif;
 	margin-bottom: 10px;
 	font-weight: bold;
+	clear: left;
   }
 
   .text-level-B, .text{
@@ -220,6 +223,8 @@ container {
 	font-weight: normal;
 	font-family: 'Open Sans Condensed', sans-serif;
 	margin-bottom: 10px;
+	clear: left;
+	width: 100%;
   }
 
   .text-hw-8{
