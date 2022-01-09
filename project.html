@@ -13,31 +13,329 @@
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
 
-
 <!-- CSS -->
 <link rel="stylesheet" href="styles.css">
 
 
 <!-- Title -->
-<h1>Data Science Portfolio</h1>
+<h1>Data Science Project</h1>
 
+<!-- Header -->
+<h2>Freddie Lowe | Student number: 1906721</h2>
 
 
 <head>
 
-  <!-- ///////////////////  HEAD //////////////////////////////////// -->
+    <!-- ///////////////////  HEAD //////////////////////////////////// -->
+  
+  
+  
+  
+  
+  <!-- ///////////////////  START BODY //////////////////////////////////// -->
+  
+  <body>
+  
+    <div class="navbuttons">
+        <button class="button" style="vertical-align:middle" onclick="location.href='portfolio.html'"><span>Portfolio </span></button>
+        <button class="button" style="vertical-align:middle" onclick="location.href='project.html'"><span>Project </span></button>
+        <button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/freddielowe1/freddielowe1.github.io'"><span>Github </span></button>
+        <button class="button" style="vertical-align:middle" onclick="location.href='https://rapidcharts.io/datascience'"><span>Course Site </span></button>
+    
+      </div>
+
+<p class=title1>A project exploring the effect on pay on investment banks' performance</p>
+
+<container class="sectionA">
+
+ <div class="text-level-A"> Introduction </div>
+
+ <div class="text-level-B"> One of the most fundamental questions any employer must ask is how much to pay an employee. Careers in the 
+   City are no exception, despite been renowned for its large salaries. Banks further raised these salaries (c.30%) last year to cope 
+   with burnout and the war for talent. But does this provide value for money? This project aims to establish a link between pay for 
+   bankers and their performance, measured by the fees the bank brings in each year. My initial expectation is that of a negative 
+   correlation: lower-performing banks to need to pay a higher salary to attract talent, where better performing banks can leverage 
+   their prestige.
+
+  
+   <p>Unfortunately, banks do not actively publish their annual fees and employee salaries. Furthermore, data providers, 
+     such as Refinitiv, which publish APIs containing this information, charge thousands each year for access. This project's 
+     primary aim is therefore to use free resources to provide this data and perform some basic analysis. Please note: at no 
+     point does this project attempt to establish causality – merely tries to establish a link. </p>
+ </a> 
+</div>
+
+</container>
+
+<container class="sectionA">
+
+  <div class="text-level-A"> Section 1: What are the major global investment banks </div>
+
+  <div class="text-level-B">This first chart outlines the major players in the space. The data is from the FT, 
+    scraped from their website. The FT only publishes the top 10 banks (not the top 30), but it is a free 
+    resource which can be updated very quickly. Whilst they do produce the previous year’s tables, these are nested in a dynamic 
+    table which cannot easily be scraped. The chart’s data can be replicated  
+    <a href="https://colab.research.google.com/drive/1Dj3RkMDs8wl5iAcQP9PeOScIGM61p5K_?usp=sharing target="_blank" style="color:white">here.</a> 
+  </div>
+
+<!--Chart 14 -->
+<div class="chart" id="chart14">
+    <script>
+      var myChart14 = "charts/IBDTable.json";
+      vegaEmbed('#chart14', myChart14);
+    </script>
+  </div>
+
+  
+
+
+</container>
+
+
+<container class="sectionB">
+
+<div class="text-level-A"> Section 2: Pay landscape for Investment Bankers in London </div>
+
+  <div class="text-level-B">Arkesden is a headhunter, based in London, which produces an annual, free-to-download, 
+    PDF report summarising investment banking pay. Press  
+    <a href="https://www.arkesden.com/asset/8424/download?1619082748 target="_blank" style="color:white">here</a> 
+    for the latest report.
+    A PDF scraper has been built, downloading the data in seconds. Camelot (the Python library) needed significant 
+    adjustments for edge and row tolerance, 
+    but the final product should collect all data in any new report.
+    <p>The latest PDF (2020-2021) does not reflect the recent increase in base salary. 
+      The link for the scraper is <a href="https://colab.research.google.com/drive/1gvyMhGYsEuG0Nz7rn6sJQ6BvTqt8IK_q?usp=sharing target="_blank" style="color:white">here.</a> 
+  </p>
+  </div>
+
+<!--Chart 15 -->
+<div class="chart" id="chart15">
+  <script>
+    var myChart15 = "charts/BankPay.json";
+    vegaEmbed('#chart15', myChart15);
+  </script>
+</div>
+
+<!--Chart 16 -->
+<div class="chart" id="chart16">
+  <script>
+    var myChart16 = "charts/PositionPay.json";
+    vegaEmbed('#chart16', myChart16);
+  </script>
+</div>
+
+<div class="text-level-B"> These two charts above summarise base pay (excluding bonuses, which often make up a sizable proportion of a 
+  bankers' salary). </div>
+
+<!--Chart 17 -->
+<div class="chart" id="chart17">
+  <script>
+    var myChart17 = "charts/BankTotalComp.json";
+    vegaEmbed('#chart17', myChart17);
+  </script>
+</div>
+
+
+<div class="text-level-B"> The chart above shows the total compensation (base + bonus pay). Bonus is a function of the performance of 
+  the individual (what we are testing) and performance of the bank, an example of reverse causality, hence why this project is not aiming 
+  to infer causality. The data from the chart was again scraped from Arkesden and can be replicated 
+  <a href="https://colab.research.google.com/drive/1xYs3wGOMoyUAM0xy5N4-e0zn0kVu_6gC?usp=sharing target="_blank" style="color:white">here.</a>
+
+</div>
 
 
 
+</container>
 
 
-<!-- ///////////////////  START BODY //////////////////////////////////// -->
+<container class="sectionB">
 
-<body>
+<div class="text-level-A"> Section 3: Comparing compensation to bank performance </div>
 
-    <p class=title2><span style="font-weight: 700; color: #fff"></span> Project under construction</p>
+<div class="text-level-B"> This section combines the previous two, and places pay against performance in a scatter plot. 
+  <p>There were quite a few challenges to overcome in making these charts, such as not all FT banks having pay data, and vice versa.</p>
+  In future, one will have to manually check all banks with pay data are listed in the FT table, and vice versa for when the two 
+  datasets are merged. However, the rest of the python file is automated and can be refreshed when new report is published. The data 
+  in the charts can be replicated 
+   <a href="https://colab.research.google.com/drive/1Si9vNRv9sr6IWod5x9Dwcj5z3uFfSGBY?usp=sharing target="_blank" style="color:white">here.</a>
+</div>
 
-</body>
-<!-- ///////////////////  END BODY //////////////////////////////////// -->
+<!--Chart 18 -->
+<div class="chart" id="chart18">
+  <script>
+    var myChart18 = "charts/TotalComp_Performance.json";
+    vegaEmbed('#chart18', myChart18);
+  </script>
+</div>
 
-</html>
+<!--Chart 19 -->
+<div class="chart" id="chart19">
+  <script>
+    var myChart19 = "charts/BaseComp_Performance.json";
+    vegaEmbed('#chart19', myChart19);
+  </script>
+</div>
+
+</container>
+
+<container class="sectionC">
+
+  <div class="text-level-A"> Section 4: Regressing bank performance on compensation </div>
+
+  <div class="text-level-B"><p> This section regresses the charts in section 3. We cannot regress all ranks together, because one cannot 
+    compare Analyst 1 pay to VP 3 pay in the same regression. With the scraper auto-saving backups, each year we would get more 
+    datapoints improving the reliability of our regression.
+  </p>
+  Ideally, this chart would be made using a Vega trellis, but I could not get the trellis to run all the regressions 
+  individually. The data in the charts can be replicated 
+   <a href="https://colab.research.google.com/drive/1qitCIEij52xhSsECo90t2-tCZIBg591f?usp=sharing target="_blank" style="color:white">here.</a>
+
+  </div>
+
+  <div class="trellis">
+
+  <!--Chart 26 -->
+  <div class="chartt" id="chart26">
+    <script>
+      var myChart26 = "trellis_base/analyst1.json";
+      vegaEmbed('#chart26', myChart26);
+    </script>
+  </div>
+  
+  <!--Chart 27 -->
+  <div class="chartt" id="chart27">
+    <script>
+      var myChart27 = "trellis_base/analyst2.json";
+      vegaEmbed('#chart27', myChart27);
+    </script>
+  </div>
+  
+<!--Chart 28 -->
+<div class="chartt" id="chart28">
+  <script>
+    var myChart28 = "trellis_base/associate1.json";
+    vegaEmbed('#chart28', myChart28);
+  </script>
+</div>
+
+<!--Chart 29 -->
+<div class="chartt" id="chart29">
+  <script>
+    var myChart29 = "trellis_base/associate2.json";
+    vegaEmbed('#chart29', myChart29);
+  </script>
+</div>
+
+<!--Chart 30 -->
+<div class="chartt" id="chart30">
+  <script>
+    var myChart30 = "trellis_base/associate3.json";
+    vegaEmbed('#chart30', myChart30);
+  </script>
+</div>
+
+<!--Chart 31 -->
+<div class="chartt" id="chart31">
+  <script>
+    var myChart31 = "trellis_base/vp1.json";
+    vegaEmbed('#chart31', myChart31);
+  </script>
+</div>
+
+
+<!--Chart 32 -->
+<div class="chartt" id="chart32">
+  <script>
+    var myChart32 = "trellis_base/vp2.json";
+    vegaEmbed('#chart32', myChart32);
+  </script>
+</div>
+
+
+<!--Chart 33 -->
+<div class="chartt" id="chart33">
+  <script>
+    var myChart33 = "trellis_base/vp3.json";
+    vegaEmbed('#chart33', myChart33);
+  </script>
+</div>
+
+</div>
+
+
+  <div class="text-level-A">  </div>
+  <div class="trellis">
+  <!--Chart 20 -->
+  <div class="chartt" id="chart20">
+    <script>
+      var myChart20 = "trellis/associate1.json";
+      vegaEmbed('#chart20', myChart20);
+    </script>
+  </div>
+  
+  <!--Chart 21 -->
+  <div class="chartt" id="chart21">
+    <script>
+      var myChart21 = "trellis/associate2.json";
+      vegaEmbed('#chart21', myChart21);
+    </script>
+  </div>
+  
+<!--Chart 22 -->
+<div class="chartt" id="chart22">
+  <script>
+    var myChart22 = "trellis/associate3.json";
+    vegaEmbed('#chart22', myChart22);
+  </script>
+</div>
+
+<!--Chart 23 -->
+<div class="chartt" id="chart23">
+  <script>
+    var myChart23 = "trellis/vp1.json";
+    vegaEmbed('#chart23', myChart23);
+  </script>
+</div>
+
+<!--Chart 24 -->
+<div class="chartt" id="chart24">
+  <script>
+    var myChart24 = "trellis/vp2.json";
+    vegaEmbed('#chart24', myChart24);
+  </script>
+</div>
+
+<!--Chart 25 -->
+<div class="chartt" id="chart25">
+  <script>
+    var myChart25 = "trellis/vp3.json";
+    vegaEmbed('#chart25', myChart25);
+  </script>
+</div>
+
+</div>
+
+<div class="text-level-B"><p> As expected, there is a strong correlation between total compensation and bank performance. This is 
+  because bank bonuses tend to be a function of the performance of the bank. However, the relationship is striking, with an R2>0.4 
+  in half the regressions. </p>
+  <p>Unsurprisingly, the R2 is much lower when considering just base pay. However, there is still an upward trend, suggesting that 
+    there is some correlation between base pay and performance. Contrary to my initial expectation: banks which pay more have, on 
+    average, better performance.
+</p>
+</div>
+  </container>
+
+  <container class="sectionC">
+
+    <div class="text-level-A"> Conclusion </div>
+
+    <div class="text-level-B"><p> Overall, many of the project's aims have been met. We have established a positive correlation between 
+      pay and performance. Furthermore, data (in a space which is highly protected by paywalls) has been uncovered, collection automated, 
+      and used in analysis. The greatest weakness of the project is that there are simply not enough datapoints for completely robust 
+      regressions. However, the data collection is (almost) fully automated, allowing charts to be refreshed each year. Future work 
+      should use this data to perform more robust regressions, with more datapoints to improve accuracy.
+   </p></div>
+
+  </container>
+
+  </body>
